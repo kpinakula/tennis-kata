@@ -40,6 +40,12 @@ describe 'tennis score' do
     it 'returns "Player 1 wins" given "11112"' do
         expect(score_calculator("11112")).to eq("Player 1 wins")
     end
+    it 'returns "Player 1 wins" given "11112222"' do
+        expect(score_calculator("11112222")).to eq("Player 1 wins")
+    end
+    it 'returns "Player 1 wins" given "1212121122"' do
+        expect(score_calculator("1212121122")).to eq("Player 1 wins")
+    end
 end
 
 # method that aceepts a string that represents a number of points (e.g. "1221") and returns the score board, e.g. "Deuce" or "15:15" or "love:15"

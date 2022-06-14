@@ -5,9 +5,14 @@ def score_calculator(points)
     scoreboard = ""
     player1_points = points.count('1')
     player2_points = points.count('2')
-
-    if player1_points >= 3 && player2_points >= 3
+    
+    if points[0,6].count("1") > 3
+        scoreboard = "Player 1 wins"
+    elsif points[0,6].count("2") > 3
+        scoreboard = "Player 2 wins"
+    elsif player1_points >= 3 && player2_points >= 3 
         points_difference = player1_points - player2_points
+        # TODO: point_pairs_after_deuce = points[6..-1].scan(/.{2}/).to_a
         if points_difference == 0
             scoreboard = "Deuce"
         elsif points_difference == 1 
