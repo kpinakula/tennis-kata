@@ -12,7 +12,12 @@ def score_calculator(points)
             scoreboard = "Deuce"
         elsif points_difference == 1 
             scoreboard = "Advantage Player 1"
-
+        elsif points_difference == -1
+            scoreboard = "Advantage Player 2"
+        elsif points_difference == -2
+            scoreboard = "Player 2 wins"
+        elsif points_difference == 2
+            scoreboard = "Player 1 wins"
         end
     else
         score_list.each_with_index do |score, index|
