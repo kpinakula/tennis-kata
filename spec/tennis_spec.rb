@@ -7,6 +7,9 @@ describe 'tennis score' do
     it 'returns "15:love" given "1"' do
         expect(score_calculator("1")).to eq("15:love")
     end
+    it 'returns "15:15" given "12"' do
+        expect(score_calculator("12")).to eq("15:15")
+    end
 end
 
 # method that aceepts a string that represents a number of points (e.g. "1221") and returns the score board, e.g. "Deuce" or "15:15" or "love:15"
